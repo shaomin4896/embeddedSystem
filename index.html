@@ -2,7 +2,7 @@
 <html lang="en">
 
 <head>
-    <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
+    <!-- <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests"> -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
@@ -14,14 +14,32 @@
 </head>
 
 <body>
-    <input type="text" value="192.168.0.18">
+    <input class="ip" type="text" value="192.168.0.18">
     <h1>Light</h1>
     <div class="device_1">
+
         <label class="switch">
             <input type="checkbox" id="light" class="chk">
             <span class="slider round"></span>
         </label>
     </div>
+    
+    <script src="https://www.gstatic.com/firebasejs/4.12.1/firebase.js"></script>
+
+    <script>
+        // Your web app's Firebase configuration
+        var firebaseConfig = {
+            apiKey: "AIzaSyBpC2LaQKx4A8WueqwsuJwfzIZlZn3SrX0",
+            authDomain: "iotarduino666.firebaseapp.com",
+            databaseURL: "https://iotarduino666.firebaseio.com",
+            projectId: "iotarduino666",
+            storageBucket: "iotarduino666.appspot.com",
+            messagingSenderId: "443252934134",
+            appId: "1:443252934134:web:3890cf6db474e40ba473d7"
+        };
+        // Initialize Firebase
+        firebase.initializeApp(firebaseConfig);
+    </script>
 </body>
 
 </html>

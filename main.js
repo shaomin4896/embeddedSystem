@@ -1,13 +1,11 @@
 $(document).ready(() => {
 
-    $('#light').on("change",()=>{
-        
+    $('#light').on("change", () => {
+        var led = firebase.database().ref('blueLight');
         if ($('#light').is(":checked")) {
-            
-            $.get('http://192.168.0.18/on');
-        }else{
-            
-            $.get('http://192.168.0.18/off');
+            led.set(1);
+        } else {
+            led.set(0);
         }
     });
 });
