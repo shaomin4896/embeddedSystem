@@ -22,20 +22,24 @@
 <body>
     <div class="mdl-tabs mdl-js-tabs mdl-js-ripple-effect">
         <div class="mdl-tabs__tab-bar">
-            <a href="#starks-panel" class="mdl-tabs__tab is-active">Starks</a>
-            <!-- <a href="#lannisters-panel" class="mdl-tabs__tab">Lannisters</a>
-            <a href="#targaryens-panel" class="mdl-tabs__tab">Targaryens</a> -->
+            <a href="#room1-panel" class="mdl-tabs__tab is-active">Room1</a>
+            <a href="#room2-panel" class="mdl-tabs__tab">Room2</a>
+            <!-- <a href="#targaryens-panel" class="mdl-tabs__tab">Targaryens</a> -->
         </div>
 
-        <div class="mdl-tabs__panel is-active" id="starks-panel">
-            <h1 id="light_status">Light</h1>
-
+        <div class="mdl-tabs__panel is-active" id="room1-panel">
+            <h2 id="light_status">BlueLight</h2>
             <label class="mdl-switch mdl-js-switch mdl-js-ripple-effect switch_blueLight" for="switch-1">
                 <input type="checkbox" id="switch-1" class="mdl-switch__input light" checked>
                 <span class="mdl-switch__label"></span>
             </label>
+            <h2 id="servo_status">SwitchServo</h2>
+            <label class="mdl-switch mdl-js-switch mdl-js-ripple-effect switch_servo" for="switch-2">
+                <input type="checkbox" id="switch-2" class="mdl-switch__input servo" checked>
+                <span class="mdl-switch__label"></span>
+            </label>
         </div>
-        <!-- <div class="mdl-tabs__panel" id="lannisters-panel">
+        <div class="mdl-tabs__panel" id="room2-panel">
             <ul>
                 <li>Tywin</li>
                 <li>Cersei</li>
@@ -43,7 +47,7 @@
                 <li>Tyrion</li>
             </ul>
         </div>
-        <div class="mdl-tabs__panel" id="targaryens-panel">
+        <!-- <div class="mdl-tabs__panel" id="targaryens-panel">
             <ul>
                 <li>Viserys</li>
                 <li>Daenerys</li>
