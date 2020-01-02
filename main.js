@@ -1,6 +1,6 @@
 $(document).ready(() => {
     var led = firebase.database().ref('blueLight');
-    var servo = firebase.database().ref('servo');
+    var dht = firebase.database().ref('dht');
     $('.light').on('click', () => {
         if ($('.light').is(":checked")) {
             led.set(1);
@@ -8,12 +8,10 @@ $(document).ready(() => {
             led.set(0);
         }
     });
-    $('.servo').on('click',()=>{
-        if ($('.servo').is(":checked")) {
-            servo.set(1);
-        } else {
-            servo.set(0);
-        }
+    dht.on('value',(r)=>{
+        dhtJson = r.val();
+        $('.tem').html(`${dhtJson.dht_tem}°C`);
+        $('.hum').html(`${dhtJson.dht_hum}.00%`);
     });
     led.on('value', (r) => {
         if (r.val() == 1) {
@@ -24,13 +22,6 @@ $(document).ready(() => {
             $('#light_status').html('BlueLight_Off');
         }
     });
-    servo.on('value', (r) => {
-        if (r.val() == 1) {
-            $('.switch_servo').addClass('is-checked');
-            $('#servo_status').html('SwitchServo_On');
-        } else {
-            $('.switch_servo').removeClass('is-checked');
-            $('#servo_status').html('SwitchServo_Off');
-        }
-    });
+
+
 });

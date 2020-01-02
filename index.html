@@ -28,24 +28,27 @@
         </div>
 
         <div class="mdl-tabs__panel is-active" id="room1-panel">
+            <table class="mdl-data-table mdl-js-data-table mdl-data-table--selectable mdl-shadow--2dp">
+                <tbody>
+                  <tr>
+                    <td class="mdl-data-table__cell--non-numeric">humidity</td>
+                    <td class="hum"></td>
+                  </tr>
+                  <tr>
+                    <td class="mdl-data-table__cell--non-numeric">temperature</td>
+                    <td class="tem"></td>
+                  </tr>
+                </tbody>
+              </table>
             <h2 id="light_status">BlueLight</h2>
             <label class="mdl-switch mdl-js-switch mdl-js-ripple-effect switch_blueLight" for="switch-1">
                 <input type="checkbox" id="switch-1" class="mdl-switch__input light" checked>
                 <span class="mdl-switch__label"></span>
             </label>
-            <h2 id="servo_status">SwitchServo</h2>
-            <label class="mdl-switch mdl-js-switch mdl-js-ripple-effect switch_servo" for="switch-2">
-                <input type="checkbox" id="switch-2" class="mdl-switch__input servo" checked>
-                <span class="mdl-switch__label"></span>
-            </label>
         </div>
+
         <div class="mdl-tabs__panel" id="room2-panel">
-            <ul>
-                <li>Tywin</li>
-                <li>Cersei</li>
-                <li>Jamie</li>
-                <li>Tyrion</li>
-            </ul>
+            
         </div>
         <!-- <div class="mdl-tabs__panel" id="targaryens-panel">
             <ul>
