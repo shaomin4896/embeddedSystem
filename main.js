@@ -25,13 +25,7 @@ $(document).ready(() => {
         });
     });
     $('.close_submit').on('click', () => {
-        pwd = $('.pwdtext').val();
-        var pwdref = firebase.database().ref('pwd');
-        pwdref.once('value', (r) => {
-            if (pwd == r.val()) {
-                door.set(0);
-            }
-        });
+        door.set(0);
     });
     $('.reset').on('click', () => {
         $('.pwd').hide();
