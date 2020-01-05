@@ -23,32 +23,72 @@
     <div class="mdl-tabs mdl-js-tabs mdl-js-ripple-effect">
         <div class="mdl-tabs__tab-bar">
             <a href="#room1-panel" class="mdl-tabs__tab is-active">Room1</a>
-            <a href="#room2-panel" class="mdl-tabs__tab">Room2</a>
+            <a href="#room2-panel" class="mdl-tabs__tab">紀錄</a>
             <!-- <a href="#targaryens-panel" class="mdl-tabs__tab">Targaryens</a> -->
         </div>
 
         <div class="mdl-tabs__panel is-active" id="room1-panel">
-            <table class="mdl-data-table mdl-js-data-table mdl-data-table--selectable mdl-shadow--2dp">
+            <table class="mdl-data-table mdl-js-data-table mdl-shadow--2dp">
                 <tbody>
-                  <tr>
-                    <td class="mdl-data-table__cell--non-numeric">humidity</td>
-                    <td class="hum"></td>
-                  </tr>
-                  <tr>
-                    <td class="mdl-data-table__cell--non-numeric">temperature</td>
-                    <td class="tem"></td>
-                  </tr>
+                    <tr>
+                        <td class="mdl-data-table__cell--non-numeric">humidity</td>
+                        <td class="hum"></td>
+                    </tr>
+                    <tr>
+                        <td class="mdl-data-table__cell--non-numeric">temperature</td>
+                        <td class="tem"></td>
+                    </tr>
                 </tbody>
-              </table>
+            </table>
             <h2 id="light_status">BlueLight</h2>
             <label class="mdl-switch mdl-js-switch mdl-js-ripple-effect switch_blueLight" for="switch-1">
-                <input type="checkbox" id="switch-1" class="mdl-switch__input light" checked>
+                <input type="checkbox" id="switch-1" class="mdl-switch__input light">
                 <span class="mdl-switch__label"></span>
             </label>
+           
+            <div class="pwd" style="">
+                <form action="#">
+                    <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                        <input class="mdl-textfield__input pwdtext" type="text" id="sample3">
+                        <label class="mdl-textfield__label" for="sample3">輸入密碼<label>
+                    </div>
+                </form>
+                <!-- Raised button with ripple -->
+                <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect submit">
+                    開門
+                </button>
+                <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect close_submit">
+                    關門
+                </button>
+                <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect reset">
+                    重設
+                </button>
+            </div>
+            <div class="re" style="display: none;">
+                <form action="#">
+                    <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                        <input class="mdl-textfield__input pwdtext" type="text" id="re_old_pwd">
+                        <label class="mdl-textfield__label" for="re_old_pwd">舊密碼<label>
+                    </div>
+                </form>
+                <form action="#">
+                    <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                        <input class="mdl-textfield__input pwdtext" type="text" id="re_new_pwd">
+                        <label class="mdl-textfield__label" for="re_new_pwd">新密碼<label>
+                    </div>
+                </form>
+                <!-- Raised button with ripple -->
+                <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect re_submit">
+                    確認
+                </button>
+                <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect re_cancel">
+                    取消
+                </button>
+            </div>
         </div>
 
         <div class="mdl-tabs__panel" id="room2-panel">
-            
+
         </div>
         <!-- <div class="mdl-tabs__panel" id="targaryens-panel">
             <ul>
