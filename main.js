@@ -65,10 +65,10 @@ $(document).ready(() => {
     led.on('value', (r) => {
         if (r.val() == 1) {
             $('.switch_blueLight').addClass('is-checked');
-            $('#light_status').html('BlueLight_On');
+            $('#light_status').html('冷氣_On');
         } else {
             $('.switch_blueLight').removeClass('is-checked');
-            $('#light_status').html('BlueLight_Off');
+            $('#light_status').html('冷氣_Off');
         }
     });
 });
