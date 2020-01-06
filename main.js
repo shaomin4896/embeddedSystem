@@ -31,10 +31,36 @@ $(document).ready(() => {
         $('.pwd').hide();
         $('.re').show();
     });
+    var tmp_tem = 0, tmp_hum = 0;
+
     dht.on('value', (r) => {
         dhtJson = r.val();
         $('.tem').html(`${dhtJson.dht_tem}°C`);
         $('.hum').html(`${dhtJson.dht_hum}.00%`);
+        if (dhtJson.dht_tem > tmp_tem) {
+            $('.tem').css({"background-color":"#F08080","transition":".5s"});
+            setTimeout( function() {
+                $('.tem').css({"background-color":"","transition":".5s"});
+           }, 500);
+        } else if (dhtJson.dht_tem < tmp_tem) {
+            $('.tem').css({"background-color":"#90EE90","transition":".5s"});
+            setTimeout( function() {
+                $('.tem').css({"background-color":"","transition":".5s"});
+           }, 500);
+        }
+        if (dhtJson.dht_hum > tmp_hum) {
+            $('.hum').css({"background-color":"#F08080","transition":".5s"});
+            setTimeout( function() {
+                $('.hum').css({"background-color":"","transition":".5s"});
+           }, 500);
+        } else if (dhtJson.dht_hum < tmp_hum) {
+            $('.hum').css({"background-color":"#90EE90","transition":".5s"});
+            setTimeout( function() {
+                $('.hum').css({"background-color":"","transition":".5s"});
+           }, 500);
+        }
+        tmp_tem = dhtJson.dht_tem;
+        tmp_hum = dhtJson.dht_hum;
     });
     led.on('value', (r) => {
         if (r.val() == 1) {
